@@ -1,0 +1,32 @@
+/* Complementos exclusivos do case; estrutura e linguagem visual reutilizadas da EVA. */
+.adventist-case h1 { overflow-wrap: anywhere; }
+.adventist-case .case-title { margin-top: 20px; }
+.adventist-case .case-intro { max-width: 750px; }
+.adventist-case .case-copy p + p { margin-top: 20px; }
+.adventist-case .identity-demo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px;
+  margin-top: 42px;
+}
+.adventist-case .identity-demo > * { min-width: 0; }
+.adventist-case .palette { list-style: none; margin: 22px 0 0; padding: 0; }
+.adventist-case .palette li { display: flex; align-items: center; gap: 16px; margin-top: 18px; font-size: 14px; }
+.adventist-case .palette .small { display: block; margin-top: 4px; }
+.adventist-case .swatch { width: 58px; height: 58px; flex: none; border: 1px solid var(--line); }
+/* Valores extraídos dos pixels da imagem depois.png. */
+.adventist-case .swatch-blue { background: #00558c; }
+.adventist-case .swatch-light { background: #f8f8ff; }
+.adventist-case .swatch-white { background: #fff; }
+.adventist-case .type-demo { font-family: 'Open Sans', Arial, sans-serif; border-top: 1px solid var(--line); padding-top: 22px; }
+.adventist-case .type-heading { font-size: clamp(24px, 3vw, 34px); font-weight: 700; line-height: 1.25; letter-spacing: -.03em; color: #00558c; margin-top: 30px; }
+.adventist-case .type-subtitle { font-size: 20px; font-weight: 600; color: #00558c; margin-top: 18px; }
+.adventist-case .type-body { margin-top: 12px; }
+.adventist-case .components-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: 42px; }
+.adventist-case .components-grid .figure { margin: 0; min-width: 0; }
+.adventist-case .components-grid img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
+.adventist-case .component-title { display: block; color: var(--ink); margin-bottom: 6px; font-weight: 550; }
+@media (max-width: 760px) {
+  .adventist-case .identity-demo, .adventist-case .components-grid { grid-template-columns: 1fr; }
+  .adventist-case .identity-demo { gap: 30px; }
+}

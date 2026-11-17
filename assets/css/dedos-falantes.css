@@ -1,0 +1,13 @@
+/* Complementos exclusivos; estrutura editorial e responsividade reutilizadas da EVA. */
+.dedos-case h1 { overflow-wrap: anywhere; }
+.dedos-case .case-title { margin-top: 20px; }
+.dedos-case .case-intro { max-width: 750px; }
+.dedos-case .case-copy p + p { margin-top: 20px; }
+.dedos-case .figure img { width: 100%; height: auto; object-fit: contain; }
+/* Telas completas, alinhadas pelo topo e com larguras proporcionais aos dispositivos. */
+.dedos-case .screens { display: grid; grid-template-columns: minmax(0, 2.3fr) minmax(0, 1fr); gap: 22px; align-items: start; }
+.dedos-case .screens .figure { min-width: 0; }
+.dedos-case .mobile-screen { width: 100%; max-width: 339px; justify-self: center; }
+@media (max-width: 760px) {
+  .dedos-case .screens { grid-template-columns: 1fr; gap: 0; }
+}

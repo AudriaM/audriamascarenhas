@@ -1,0 +1,3 @@
+// Efeito de inclinação suave sobre a ilustração estática. Não é uma rotação 360° real.
+const stage=document.getElementById('artStage');const frame=document.getElementById('artFrame');
+if(stage&&frame&&window.matchMedia('(hover:hover) and (pointer:fine)').matches&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;frame.style.transform=`rotateY(${(x*13).toFixed(2)}deg) rotateX(${(-y*9).toFixed(2)}deg) translate3d(${(x*7).toFixed(2)}px,${(y*5).toFixed(2)}px,0)`});stage.addEventListener('pointerleave',()=>{frame.style.transform='rotateY(0deg) rotateX(0deg) translate3d(0,0,0)'})}

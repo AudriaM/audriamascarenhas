@@ -1,0 +1,10 @@
+/* Complementos do case curto; estrutura editorial reutilizada de eva.css. */
+.vegan-case h1 { overflow-wrap: anywhere; }
+.vegan-case .vegan-cover { margin-top: 65px; }
+.vegan-section-title { margin-top: 20px; }
+.vegan-copy { max-width: 750px; }
+.vegan-case .figure img { width: 100%; height: auto; }
+.vegan-complete { border-bottom: 0; }
+@media (max-width: 760px) {
+  .vegan-case .vegan-cover { margin-top: 42px; }
+}
