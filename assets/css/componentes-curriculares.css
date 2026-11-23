@@ -1,0 +1,56 @@
+.case-componentes h1,
+.case-componentes h2,
+.case-componentes .eyebrow,
+.case-componentes figcaption,
+.project-componentes h2 {
+  color: #000;
+}
+
+.case-componentes h1 {
+  overflow-wrap: anywhere;
+}
+
+.case-componentes .context-image {
+  margin-top: 65px;
+}
+
+.case-componentes .section > .eyebrow {
+  margin-bottom: 20px;
+}
+
+.case-componentes .section p {
+  max-width: 750px;
+}
+
+.case-componentes .section p + p {
+  margin-top: 1em;
+}
+
+.case-componentes .section:last-child {
+  border-bottom: 0;
+}
+
+.image-fallback:not([hidden]) {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: var(--image-width) / var(--image-height);
+  background: var(--portfolio-line);
+  color: var(--portfolio-ink);
+  font-size: 13px;
+  text-align: center;
+}
+
+.preview .image-fallback:not([hidden]) {
+  height: 100%;
+}
+
+img[data-image-fallback][hidden] {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .case-componentes .context-image {
+    margin-top: 42px;
+  }
+}
