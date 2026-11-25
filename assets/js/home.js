@@ -1,6 +1,7 @@
 const filters = document.querySelectorAll('.filter');
 const projects = document.querySelectorAll('#projetos .project');
 const emptyState = document.getElementById('projects-empty');
+const maxHomeProjects = 6;
 
 function applyProjectFilter(selectedButton) {
   const category = selectedButton.dataset.filter;
@@ -15,10 +16,10 @@ function applyProjectFilter(selectedButton) {
   projects.forEach(project => {
     // Cards de exemplo permanecem reservados até a publicação do projeto.
     const published = project.dataset.published !== 'false';
-    const matches = category === 'todos'
+    const matches = category === 'principais'
       ? project.dataset.featured === 'true'
       : project.dataset.category === category;
-    const visible = published && matches;
+    const visible = published && matches && visibleCount < maxHomeProjects;
     project.classList.toggle('hidden', !visible);
     if (visible) visibleCount += 1;
   });
